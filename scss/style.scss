@@ -1,0 +1,85 @@
+@import "reset";
+@import "mixins";
+@import "variables";
+
+
+#main-nav{
+  background: $deepBlue;
+  ul{
+    width: 100%;
+    @include clearFix;
+
+  }
+  li{
+    float: left;
+    width: (100% / 6);
+    @include mQ(600px,100px){
+      width: 100%;
+    }
+  }
+  a{
+    color: $offWhite;
+    text-decoration: none;
+    padding: 16px;
+    display: block;
+    text-align: center;
+    &:hover{
+      background: lighten($deepBlue, 6);
+    }
+  }
+
+
+}
+
+
+
+section h1{
+  font-size: $sectionHeading;
+  color: $deepBlue;
+}
+.lead-banner{
+  @include banner;
+  text-align: right;
+}
+
+.lessons-banner{
+  @include banner;u
+  li{
+    text-transform: uppercase;
+    font-size: 20px;
+    max-width: 500px;
+    margin: 60px 0;
+  }
+}
+#services{
+  margin-bottom: 60px;
+  li{
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  img{
+    width: 60%;
+    margin: 20px 20px;
+  }
+  a{
+    text-decoration: none;
+    color: $deepBlue;
+    font-weight: bold;
+    &:hover{
+      color: complement($deepBlue);
+    }
+  }
+  ul{
+    @include clearFix;
+  }
+
+}
+#projects li{
+  @include gird(4, 4%);
+  img{
+    width: 100%;
+
+  }
+
+}
